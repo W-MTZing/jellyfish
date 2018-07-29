@@ -8,10 +8,9 @@
 		"newFeature": true
 	},
 	"compileType": "game",
-	"libVersion": "2.2.1",
-	"appid": "touristappid",
-	"projectname": "jellyfish",
-	"isGameTourist": true,
+	"libVersion": "game",
+	"appid": "wxa13f59ae868bf7ab",
+	"projectname": "jellyfish2",
 	"condition": {
 		"search": {
 			"current": -1,

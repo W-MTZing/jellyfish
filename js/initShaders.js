@@ -91,13 +91,14 @@ function createProgram(fragmentShaderID, vertexShaderID) {
 }
 
 var currentProgram;
+window.currentProgram = currentProgram;
 
 var shaderProgram = {};
   
 window.initShaders =  function initShaders() {
   shaderProgram["jellyfish"] = createProgram("jellyfish-fs", "jellyfish-vs");
   currentProgram = shaderProgram["jellyfish"];
-  window.currentProgram = currentProgram;
+  
   setShader("jellyfish");
   bindTexture('jellyfish', 0);
   bindTexture('luminescence', 2);

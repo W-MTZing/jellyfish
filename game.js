@@ -1,31 +1,35 @@
 // window.optConfig.disableBatchGLCommandsToNative();
-require("src/js/mjs.js");
+require("js/libs/weapp-adapter.js")
+require("js/libs/symbol.js")
+
+require("js/mjs.js");
 console.log("111111111");
-require("src/js/initWin.js");
+
+require("js/initWin.js");
 
 console.log("222222");
-require("src/js/initUniforms.js");
+require("js/initUniforms.js");
 
 console.log("3333");
-require("src/js/initTextures.js");
+require("js/initTextures.js");
 
 console.log("4444");
-require("src/js/initShaders.js");
+require("js/initShaders.js");
 
 console.log("5555");
-require("src/js/initBuffers.js");
+require("js/initBuffers.js");
 
 console.log("6666");
-require("src/js/interact.js");
+require("js/interact.js");
 
 console.log("77777");
-require("src/js/debug.js");
+require("js/debug.js");
 
 console.log("88888");
-require("src/js/tick.js");
-require("src/js/simulator.js");
-require("src/js/drawJellyfish.js");
-require("src/js/drawScene.js");
+require("js/tick.js");
+require("js/simulator.js");
+require("js/drawJellyfish.js");
+require("js/drawScene.js");
 
 window['jellyfish-vs'] = `
 precision highp float;
@@ -150,7 +154,7 @@ fs.access({
   fail() {
     console.log("json file access fail");
     rt.downloadFile({
-      url: "http://47.98.62.68/cocos-runtime-demo/media/jellyfish-meshes.zip",
+      url: "http://192.168.1.7:8080/jellyfish-meshes.zip",
       filePath: `${rt.env.USER_DATA_PATH}/jellyfish-meshes.zip`,
       success(param) {
         console.log("download success");

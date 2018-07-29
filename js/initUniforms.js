@@ -45,12 +45,12 @@ window.setJointUniforms = function setJointUniforms(){
 
 window.setMatrixUniforms = function setMatrixUniforms(){
   // Set necessary matrices
-  M4x4.mul(mView,mWorld,mWorldView);
-  M4x4.mul(mProjection,mWorldView,mWorldViewProj);
-  M4x4.inverseOrthonormal(mView,mViewInv);
+  M4x4.mul(window.mView, window.mWorld,mWorldView);
+  M4x4.mul(window.mProjection,mWorldView,mWorldViewProj);
+  M4x4.inverseOrthonormal(window.mView,mViewInv);
 
   // Set Uniforms
-  gl.uniformMatrix4fv(currentProgram.world, gl.FALSE, new Float32Array(mWorld));
+  gl.uniformMatrix4fv(currentProgram.world, gl.FALSE, new Float32Array(window.mWorld));
   gl.uniformMatrix4fv(currentProgram.worldView, gl.FALSE, new Float32Array(mWorldView));
   gl.uniformMatrix4fv(currentProgram.worldViewProj, gl.FALSE, new Float32Array(mWorldViewProj));
   gl.uniformMatrix4fv(currentProgram.viewInv, gl.FALSE, new Float32Array(mViewInv));
